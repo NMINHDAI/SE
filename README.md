@@ -15,6 +15,7 @@ In this repository, we will inlcude 4 folders storing the resources for 4 main t
 - This folder will contain 3 kinds of UML diagrams that are **Activity diagram, Sequence diagram and Class diagram** that we used to visually represent a system along with its main actors, roles, actions, artifacts or classes, in order to understand, alter, maintain about the system.
 
 
-## Implementation 
-- This folder will contain the source code for our website including the **index.html** file, the **style.css and payment_style.css** file for specifying the style for the html file and a javascript file named **script.js** located in the script folder
+## Implementation
+- This folder will contain the source code for our website including the **index.html** file, the **style.css and payment_style.css** file for specifying the style for the html file and a javascript file named **script.js** located in the script folder and a folder named **images** folder containing all the images that we used to in our website. 
+- How to access our website : Just download this folder and make sure the files are in the same directory then simply click the **index.html**
 
