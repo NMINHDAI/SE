@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css" type="text/css">
+   <link rel="stylesheet" href="payment_style.css" type="text/css">
+</head>
+<body>
+    <header id = "my_header">
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>food</a>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#speciality">menu</a>
+            <a href="#popular">popular</a>
+            <a href="#gallery">gallery</a>
+            <a href="#review">review</a>
+            <a href="#reservation">Reservation</a>
+        </nav>
+    </header>
+
+
+
+    
+    <!-- home section starts  -->
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>food made with love</h3>
+            <p>This is Group 6 demo project for a restaurant</p>
+            <p>Thank you</p>
+        </div>
+        <div class="order_but"><a href="#order" class="btn">order now</a></div>
+        <div class="image">
+            <img src="images/home-img.png" alt="">
+        </div>
+
+    </section>
+    <!-- home section ends -->
+    <a class="cart-icon" id="cart-icon">
+        <p><i class="fas fa-shopping-cart"></i></p>
+    </a>
+    <!-- food categories section starts  -->
+    <section class="speciality" id="speciality">
+        <h1 class="heading"> Food <span>Categories</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img class="image" src="images/s-img-1.jpg" alt=""  onclick="add_burger()">
+                <div class="content">
+                    <img src="images/s-1.png" alt="">
+                    <h3>tasty burger</h3>
+                    <p>tasty burger ! tasty burger ! tasty burger ! tasty burger ! tasty burger !</p>
+                </div>
+        
+            </div>
+            <div class="box">
+                <img class="image" src="images/s-img-2.jpg" alt="" onclick="add_pizza()">
+                <div class="content">
+                    <img src="images/s-2.png" alt="">
+                    <h3>tasty pizza</h3>
+                    <p>tasty pizza ! tasty pizza ! tasty pizza ! tasty pizza ! tasty pizza ! tasty pizza</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="images/s-img-3.jpg" alt="" onclick="add_cream()">
+                <div class="content">
+                    <img src="images/s-3.png" alt="">
+                    <h3>cold ice-cream</h3>
+                    <p>tasty ice-cream ! tasty ice-cream ! tasty ice-cream ! tasty ice-cream !</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="images/s-img-4.jpg" alt="" onclick="add_drink()">
+                <div class="content">
+                    <img src="images/s-4.png" alt="">
+                    <h3>cold drinks</h3>
+                    <p>tasty drinks ! tasty drinks ! tasty drinks! tasty drinks ! tasty drinks ! tasty drinks</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="images/s-img-5.jpg" alt="" onclick="add_sweet()">
+                <div class="content">
+                    <img src="images/s-5.png" alt="">
+                    <h3>tasty sweets</h3>
+                    <p>tasty sweets ! tasty sweets ! tasty sweets ! tasty sweets ! tasty sweets ! tasty sweets</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="images/s-img-6.jpg" alt="" onclick="add_breakfast()">
+                <div class="content">
+                    <img src="images/s-6.png" alt="">
+                    <h3>healty breakfast</h3>
+                    <p>tasty healty breakfast ! tasty healty breakfast ! tasty healty breakfast ! healty breakfast</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- food categories section ends -->
+
+    <!-- burger section starts  -->
+    <section class="popular" id="burger" style="display : none">
+        <h1 class="heading" onclick="hide_burger()"> Tasty <span>burger</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/burger1.jfif" alt="">
+                <h3 class="shop-item-title">1st burger</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cheese, big burger, high-end beef ,full topping</p>
+                    <button style="display: none;" id = "burger1" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="burger1-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="burger-modal-1" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "burger1-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">1st Burger</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Description: Hot cheese, big burger, high-end beef ,full topping</div>
+                      <img class ="shop-item-image" src="images/burger1.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('burger1').click()">
+                        ADD TO CART</button>
+                    </div>
+                    <!-- End of modal -->
+                  
+                </div>
+
+
+            </div>
+            <div class="box">
+                <span class="price"> $5  </span>
+                <img class ="shop-item-image" src="images/burger2.jfif" alt="">
+                <h3 class="shop-item-title">2nd burger</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cream with full of fresh tangerines mixed with natural herbs</p>
+                    <button style="display: none;" class="btn btn-primary shop-item-button" id ="burger2" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="burger2-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="burger-modal-2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "burger2-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">2nd Burger</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Description: Hot cheese, big burger, high-end beef ,full topping</div>
+                      <img class ="shop-item-image" src="images/burger2.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('burger2').click()">
+                        ADD TO CART</button>
+                    </div>
+                    <!-- End of modal -->
+                  
+                </div>
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/burger3.jfif" alt="">
+                <h3 class="shop-item-title">3rd burger</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" class="btn btn-primary shop-item-button" id="burger3" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="burger3-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="burger-modal-3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "burger3-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">3rd Burger</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Description: Hot Tomato Sauce, Full Of Crunchy Chips And Potatoes</div>
+                      <img class ="shop-item-image" src="images/burger3.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('burger3').click()">
+                        ADD TO CART</button>
+                    </div>
+                    <!-- End of modal -->
+                  
+                </div>
+            </div>
+            <div class="box">
+                <span class="price"> $15  </span>
+                <img class ="shop-item-image" src="images/burger4.jfif" alt="">
+                <h3 class="shop-item-title">4th burger</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot chocolate, sweet dried grape, custard cake</p>
+                    <button  style="display: none;"class="btn btn-primary shop-item-button" id ="burger4" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="burger4-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="burger-modal-4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "burger4-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">4th Burger</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$15 </div> 
+                       <div class = modal-des>Description: Hot chocolate, sweet dried grape, custard cake</div>
+                      <img class ="shop-item-image" src="images/burger4.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('burger4').click()">
+                        ADD TO CART</button>
+                    </div>
+                    <!-- End of modal -->
+                </div>
+            </div>
+            <div class="box">
+                <span class="price"> $25 </span>
+                <img  class ="shop-item-image" src="images/burger5.jpg" alt="">
+                <h3 class="shop-item-title">5th burger</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Detox made from natural herbs and fresh fruit</p>
+                    <button style="display: none;" class="btn btn-primary shop-item-button" type="button" id="burger5" >ADD TO CART</button>
+                    <button class="btn btn-primary " id="burger5-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="burger-modal-5" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "burger5-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">5th Burger</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$25 </div> 
+                       <div class = modal-des>Description: Hot chocolate, sweet dried grape, custard cake</div>
+                      <img class ="shop-item-image" src="images/burger5.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('burger5').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/burger6.jpg" alt="">
+                <h3 class="shop-item-title">6th burger</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Mix of vegetable flavor with natural cold fruit </p>
+                    <button style="display: none;" class="btn btn-primary shop-item-button" type="button" id="burger6">ADD TO CART</button>
+                    <button class="btn btn-primary " id="burger6-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="burger-modal-6" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "burger6-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">6th Burger</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$25 </div> 
+                       <div class = modal-des>Description: Mix of vegetable flavor with natural cold fruit</div>
+                      <img class ="shop-item-image" src="images/burger6.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('burger6').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+        </div>
+    </section>
+    <!-- burger section ends -->
+
+    <!-- pizza section starts  -->
+    <section class="popular" id="pizza" style="display : none">
+        <h1 class="heading" onclick="hide_pizza()"> Tasty <span>pizza</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/pizza1.jfif" alt="">
+                <h3 class="shop-item-title">1st pizza</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cheese, big burger, high-end beef ,full topping</p>
+                    <button style="display: none;" id="pizza1" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="pizza1-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="pizza-modal-1" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "pizza1-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">1st Pizza</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Description: Hot cheese, big burger, high-end beef ,full topping</div>
+                      <img class ="shop-item-image" src="images/pizza1.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('pizza1').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $5  </span>
+                <img class ="shop-item-image" src="images/pizza2.jpg" alt="">
+                <h3 class="shop-item-title">2nd pizza</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cream with full of fresh tangerines mixed with natural herbs</p>
+                    <button style="display: none;" id ="pizza2" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="pizza2-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="pizza-modal-2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "pizza2-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">2nd Pizza</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$5 </div> 
+                       <div class = modal-des>Hot cream with full of fresh tangerines mixed with natural herbs</div>
+                      <img class ="shop-item-image" src="images/pizza2.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('pizza2').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/pizza3.jfif" alt="">
+                <h3 class="shop-item-title">3rd pizza</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id ="pizza3" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="pizza3-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="pizza-modal-3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "pizza3-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">3rd Pizza</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/pizza3.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('pizza3').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $15  </span>
+                <img class ="shop-item-image" src="images/pizza4.jfif" alt="">
+                <h3 class="shop-item-title">4th pizza</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id ="pizza4" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="pizza4-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="pizza-modal-4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "pizza4-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 40px;">4rd Pizza</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$15 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/pizza4.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('pizza4').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $25 </span>
+                <img  class ="shop-item-image" src="images/pizza5.jpg" alt="">
+                <h3 class="shop-item-title">5th pizza</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Detox made from natural herbs and fresh fruit</p>
+                    <button style="display: none;" id ="pizza5" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="pizza5-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="pizza-modal-5" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "pizza5-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size:35px;">5rd Pizza</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$25 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/pizza5.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('pizza5').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/pizza6.jfif" alt="">
+                <h3 class="shop-item-title">6th pizza</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Mix of vegetable flavor with natural cold fruit </p>
+                    <button style="display: none;" id ="pizza6" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="pizza6-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="pizza-modal-6" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "pizza6-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size:36px;">6rd Pizza</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/pizza6.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('pizza6').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+        </div>
+    </section>
+    <!-- pizza section ends -->
+    
+    <!-- cream section starts  -->
+    <section class="popular" id="cream" style="display : none">
+        <h1 class="heading" onclick="hide_cream()"> Tasty <span>cream</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/cream1.jfif" alt="">
+                <h3 class="shop-item-title">1st cream</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cheese, big burger, high-end beef ,full topping</p>
+                    <button style="display: none;" id="cream1" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="cream1-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="cream-modal-1" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "cream1-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">1st ice-cream</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Description: Hot cheese, big burger, high-end beef ,full topping</div>
+                      <img class ="shop-item-image" src="images/cream1.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('cream1').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $5  </span>
+                <img class ="shop-item-image" src="images/cream2.png" alt="">
+                <h3 class="shop-item-title">2nd cream</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cream with full of fresh tangerines mixed with natural herbs</p>
+                    <button style="display: none;" id ="cream2" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="cream2-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="cream-modal-2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "cream2-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">2nd ice-cream</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$5 </div> 
+                       <div class = modal-des>Hot cream with full of fresh tangerines mixed with natural herbs</div>
+                      <img class ="shop-item-image" src="images/cream2.png" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('cream2').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/cream3.jpg" alt="">
+                <h3 class="shop-item-title">3rd cream</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id ="cream3" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="cream3-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="cream-modal-3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "cream3-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">3rd ice-cream</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/cream3.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('cream3').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $15  </span>
+                <img class ="shop-item-image" src="images/cream4.jpg" alt="">
+                <h3 class="shop-item-title">4th cream</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id ="cream4" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="cream4-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="cream-modal-4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "cream4-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 40px;">4th ice-cream</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$15 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/cream4.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('cream4').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $25 </span>
+                <img  class ="shop-item-image" src="images/cream5.jpg" alt="">
+                <h3 class="shop-item-title">5th cream</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Detox made from natural herbs and fresh fruit</p>
+                    <button style="display: none;" id ="cream5" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="cream5-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="cream-modal-5" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "cream5-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size:35px;">5th ice-cream</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$25 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/cream5.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('cream5').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/cream6.jpg" alt="">
+                <h3 class="shop-item-title">6th cream</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Mix of vegetable flavor with natural cold fruit </p>
+                    <button style="display: none;" id ="cream6" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="cream6-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="cream-modal-6" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "cream6-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size:36px;">6th ice-cream </h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/cream6.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('cream6').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+        </div>
+    </section>
+    <!-- cream section ends -->
+
+     <!-- drink section starts  -->
+     <section class="popular" id="drink" style="display : none">
+        <h1 class="heading" onclick="hide_drink()"> Tasty <span>drink</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/drink1.jfif" alt="">
+                <h3 class="shop-item-title">1st drink</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cheese, big burger, high-end beef ,full topping</p>
+                    <button style="display: none;" id="drink1" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="drink1-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="drink-modal-1" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "drink1-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">1st drink</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Description: Hot cheese, big burger, high-end beef ,full topping</div>
+                      <img class ="shop-item-image" src="images/drink1.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('drink1').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $5  </span>
+                <img class ="shop-item-image" src="images/drink2.jpg" alt="">
+                <h3 class="shop-item-title">2nd drink</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot drink with full of fresh tangerines mixed with natural herbs</p>
+                    <button style="display: none;" id ="drink2" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="drink2-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="drink-modal-2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "drink2-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">2nd drink</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$5 </div> 
+                       <div class = modal-des>Hot drink with full of fresh tangerines mixed with natural herbs</div>
+                      <img class ="shop-item-image" src="images/drink2.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('drink2').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/drink3.jpg" alt="">
+                <h3 class="shop-item-title">3rd drink</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id ="drink3" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="drink3-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="drink-modal-3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "drink3-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">3rd drink</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/drink3.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('drink3').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $15  </span>
+                <img class ="shop-item-image" src="images/drink4.jpg" alt="">
+                <h3 class="shop-item-title">4th drink</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id ="drink4" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="drink4-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="drink-modal-4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "drink4-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 40px;">4th drink</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$15 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/drink4.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('drink4').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $25 </span>
+                <img  class ="shop-item-image" src="images/drink5.jfif" alt="">
+                <h3 class="shop-item-title">5th drink</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Detox made from natural herbs and fresh fruit</p>
+                    <button style="display: none;" id ="drink5" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="drink5-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="drink-modal-5" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "drink5-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size:35px;">5th drink</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$25 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/drink5.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('drink5').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/drink6.jpg" alt="">
+                <h3 class="shop-item-title">6th drink</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Mix of vegetable flavor with natural cold fruit </p>
+                    <button style="display: none;" id ="drink6" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="drink6-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="drink-modal-6" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "drink6-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size:36px;">6th drink </h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/drink6.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('drink6').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+        </div>
+    </section>
+    <!-- drink section ends -->
+
+    <!-- sweet section starts  -->
+    <section class="popular" id="sweet" style="display : none">
+        <h1 class="heading" onclick="hide_sweet()"> Tasty <span>sweet</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/sweet1.jfif" alt="">
+                <h3 class="shop-item-title">1st sweet</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cheese, big burger, high-end beef ,full topping</p>
+                    <button style="display: none;" id="sweet1" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="sweet1-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="sweet-modal-1" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "sweet1-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">1st sweet</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Description: Hot cheese, big burger, high-end beef ,full topping</div>
+                      <img class ="shop-item-image" src="images/sweet1.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('sweet1').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $5  </span>
+                <img class ="shop-item-image" src="images/sweet2.jfif" alt="">
+                <h3 class="shop-item-title">2nd sweet</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot sweet with full of fresh tangerines mixed with natural herbs</p>
+                    <button style="display: none;" id ="sweet2" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="sweet2-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="sweet-modal-2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "sweet2-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">2nd sweet</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$5 </div> 
+                       <div class = modal-des>Hot sweet with full of fresh tangerines mixed with natural herbs</div>
+                      <img class ="shop-item-image" src="images/sweet2.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('sweet2').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/sweet3.jfif" alt="">
+                <h3 class="shop-item-title">3rd sweet</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id ="sweet3" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="sweet3-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="sweet-modal-3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "sweet3-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">3rd sweet</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/sweet3.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('sweet3').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $15  </span>
+                <img class ="shop-item-image" src="images/sweet4.jfif" alt="">
+                <h3 class="shop-item-title">4th sweet</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id ="sweet4" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="sweet4-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="sweet-modal-4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "sweet4-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 40px;">4th sweet</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$15 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/sweet4.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('sweet4').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $25 </span>
+                <img  class ="shop-item-image" src="images/sweet5.jfif" alt="">
+                <h3 class="shop-item-title">5th sweet</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Detox made from natural herbs and fresh fruit</p>
+                    <button style="display: none;" id ="sweet5" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="sweet5-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="sweet-modal-5" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "sweet5-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size:35px;">5th sweet</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$25 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/sweet5.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('sweet5').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/sweet6.jfif" alt="">
+                <h3 class="shop-item-title">6th sweet</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Mix of vegetable flavor with natural cold fruit </p>
+                    <button style="display: none;" id ="sweet6" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="sweet6-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="sweet-modal-6" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "sweet6-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size:36px;">6th sweet </h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/sweet6.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('sweet6').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+        </div>
+    </section>
+    <!-- sweet section ends -->
+
+    <!-- breakfast section starts  -->
+    <section class="popular" id="breakfast" style="display : none">
+        <h1 class="heading" onclick="hide_breakfast()"> Tasty <span>breakfast</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/breakfast1.jfif" alt="">
+                <h3 class="shop-item-title">1st breakfast</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cheese, big burger, high-end beef ,full topping</p>
+                    <button style="display: none;" id="breakfast1" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="breakfast1-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="breakfast-modal-1" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "breakfast1-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">1st breakfast</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Description: Hot cheese, big burger, high-end beef ,full topping</div>
+                      <img class ="shop-item-image" src="images/breakfast1.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('breakfast1').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $5  </span>
+                <img class ="shop-item-image" src="images/breakfast2.jfif" alt="">
+                <h3 class="shop-item-title">2nd breakfast</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot breakfast with full of fresh tangerines mixed with natural herbs</p>
+                    <button style="display: none;" id ="breakfast2" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="breakfast2-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="breakfast-modal-2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "breakfast2-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">2nd breakfast</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$5 </div> 
+                       <div class = modal-des>Hot breakfast with full of fresh tangerines mixed with natural herbs</div>
+                      <img class ="shop-item-image" src="images/breakfast2.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('breakfast2').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/breakfast3.jfif" alt="">
+                <h3 class="shop-item-title">3rd breakfast</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id ="breakfast3" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="breakfast3-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="breakfast-modal-3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "breakfast3-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">3rd breakfast</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/breakfast3.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('breakfast3').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $15  </span>
+                <img class ="shop-item-image" src="images/breakfast4.jfif" alt="">
+                <h3 class="shop-item-title">4th breakfast</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id ="breakfast4" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="breakfast4-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="breakfast-modal-4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "breakfast4-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 40px;">4th breakfast</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$15 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/breakfast4.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('breakfast4').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $25 </span>
+                <img  class ="shop-item-image" src="images/breakfast5.jfif" alt="">
+                <h3 class="shop-item-title">5th breakfast</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Detox made from natural herbs and fresh fruit</p>
+                    <button style="display: none;" id ="breakfast5" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="breakfast5-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="breakfast-modal-5" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "breakfast5-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size:35px;">5th breakfast</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$25 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/breakfast5.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('breakfast5').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/breakfast6.jfif" alt="">
+                <h3 class="shop-item-title">6th breakfast</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Mix of vegetable flavor with natural cold fruit </p>
+                    <button style="display: none;" id ="breakfast6" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="breakfast6-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="breakfast-modal-6" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "breakfast6-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size:36px;">6th breakfast </h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/breakfast6.jfif" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('breakfast6').click()">
+                        ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                <!-- End of modal -->
+            </div>
+        </div>
+    </section>
+    <!-- breakfast section ends -->
+
+    <!-- popular section starts  -->
+    <section class="popular" id="popular">
+        <h1 class="heading"> most <span>popular</span> foods </h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/p-1.jpg" alt="">
+                <h3 class="shop-item-title">tasty burger</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cheese, big burger, high-end beef ,full topping</p>
+                    <button style="display:none" class="btn btn-primary shop-item-button" id = "popular_burger" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="popular-burger-button" >ADD TO CART</button>
+                    
+                </div>
+
+                <!-- Modal info -->
+                <div id="popular-burger-modal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "popular-burger-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">Special Burger</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des>Description: Hot cheese, big burger, high-end beef ,full topping</div>
+                      <img class ="shop-item-image" src="images/p-1.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('popular_burger').click()">
+                        ADD TO CART</button>
+                    </div>
+                    <!-- End of modal -->
+                  
+                </div>
+
+            </div>
+            <div class="box">
+                <span class="price"> $5  </span>
+                <img class ="shop-item-image" src="images/p-2.jpg" alt="">
+                <h3 class="shop-item-title">tasty cakes</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot cream with full of fresh tangerines mixed with natural herbs</p>
+                    <button style="display: none;" class="btn btn-primary shop-item-button" id = "popular_cake" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="popular-cake-button" >ADD TO CART</button>
+                    
+                </div>
+
+                <!-- Modal info -->
+                <div id="popular-cake-modal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "popular-cake-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">Special Cake</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$5 </div> 
+                       <div class = modal-des> Hot cream with full of fresh tangerines mixed with natural herbs</div>
+                      <img class ="shop-item-image" src="images/p-2.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('popular_cake').click()">
+                        ADD TO CART</button>
+                    </div>
+                    <!-- End od modal -->
+                  
+                </div>
+
+ 
+            </div>
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/p-3.jpg" alt="">
+                <h3 class="shop-item-title">tasty sweets</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot tomato sauce, full of crunchy chips and potatoes</p>
+                    <button style="display: none;" id = "popular_sweet" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="popular-sweet-button" >ADD TO CART</button>
+                </div>
+                <!-- Modal info -->
+                <div id="popular-sweet-modal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "popular-sweet-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">Special Sweet</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des> Hot tomato sauce, full of crunchy chips and potatoes</div>
+                      <img class ="shop-item-image" src="images/p-3.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('popular_sweet').click()">
+                        ADD TO CART</button>
+                    </div>
+                    <!-- End od modal -->
+                  
+                </div>
+
+                
+
+            </div>
+            <div class="box">
+                <span class="price"> $15  </span>
+                <img class ="shop-item-image" src="images/p-4.jpg" alt="">
+                <h3 class="shop-item-title">tasty cupcakes</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Hot chocolate, sweet dried grape, custard cake</p>
+                    <button style = "display: none;" class="btn btn-primary shop-item-button" id ="popular_cc" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="popular-cc-button" >ADD TO CART</button>
+                    
+                </div>
+
+                <!-- Modal info -->
+                <div id="popular-cc-modal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "popular-cc-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">Special Cupcake</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$15 </div> 
+                       <div class = modal-des> Description: Hot chocolate, sweet dried grape, custard cake</div>
+                      <img class ="shop-item-image" src="images/p-4.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('popular_cc').click()">
+                        ADD TO CART</button>
+                    </div>
+                    <!-- End od modal -->
+                  
+                </div>
+            </div>
+            <div class="box">
+                <span class="price"> $25 </span>
+                <img  class ="shop-item-image" src="images/p-5.jpg" alt="">
+                <h3 class="shop-item-title">cold drinks</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Detox made from natural herbs and fresh fruit</p>
+                    <button style="display: none;" id ="popular_drink" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="popular-drink-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="popular-drink-modal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "popular-drink-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">Special Drink</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$25 </div> 
+                       <div class = modal-des> Description: Detox made from natural herbs and fresh fruit</div>
+                      <img class ="shop-item-image" src="images/p-5.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('popular_drink').click()">
+                        ADD TO CART</button>
+                    </div>
+                    <!-- End od modal -->
+                  
+                </div>
+
+            </div>
+
+
+            <div class="box">
+                <span class="price"> $20 </span>
+                <img class ="shop-item-image" src="images/p-6.jpg" alt="">
+                <h3 class="shop-item-title">cold ice-cream</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="item-info"> 
+                    <p>Mix of vegetable flavor with natural cold fruit </p>
+                    <button style="display : none" class="btn btn-primary shop-item-button" id = "popular_ic" type="button">ADD TO CART</button>
+                    <button class="btn btn-primary " id="popular-ic-button" >ADD TO CART</button>
+                </div>
+
+                <!-- Modal info -->
+                <div id="popular-ic-modal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id = "popular-ic-close" class="close">&times;</span>
+                      <div class ="modal-name" ><h1 style="font-size: 30px;">Special Ice-cream</h1></div>
+                      <div class ="modal-quantity"> Quantity 
+                          <input type="number" value="1">
+                      </div>
+                      <div class = "modal-side-dish"> Side dish
+                        <input type="checkbox">  </div>
+                       <div class = modal-price>Price :$20 </div> 
+                       <div class = modal-des> Description: Mix Of Vegetable Flavor With Natural Cold Fruit</div>
+                      
+                      <img class ="shop-item-image" src="images/p-6.jpg" alt="">
+                      <button style = "top: 100%;" class="btn btn-primary " type="button" onclick="document.getElementById('popular_ic').click()">
+                        ADD TO CART</button>
+                    </div>
+                    <!-- End od modal -->
+                  
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- popular section ends -->
+
+    
+    <!-- steps section starts  -->
+    <div class="step-container" id ="instruction">
+        <h1 class="heading">how it <span>works</span></h1>
+        <section class="steps">
+            <div class="box">
+                <img src="images/step-1.jpg" alt="">
+                <h3>choose your favorite food</h3>
+            </div>
+            <div class="box">
+                <img src="images/step-2.jpg" alt="">
+                <h3>free and fast delivery</h3>
+            </div>
+            <div class="box">
+                <img src="images/step-3.jpg" alt="">
+                <h3>easy payments methods</h3>
+            </div>
+            <div class="box">
+                <img src="images/step-4.jpg" alt="">
+                <h3>and finally, enjoy your food</h3>
+            </div>
+        </section>
+    </div>
+    <!-- steps section ends -->
+    
+    <!-- gallery section starts  -->
+
+    <section class="gallery" id="gallery">
+        <h1 class="heading"> our food <span> gallery </span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/g-1.jpg" alt="">
+                <div class="content">
+                    <h3>Normal burger</h3>
+                    <p>This burger contain of most tasty ingredient in the world! Like super cheese, wague beef, hot tomatoes, ...</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-2.jpg" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-3.jpg" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-4.jpg" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-5.jpg" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-6.jpg" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-7.jpg" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-8.jpg" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-9.jpg" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- gallery section ends -->
+
+    
+    <!-- review section starts  -->
+    <section class="review" id="review">
+        <h1 class="heading"> our customers <span>reviews</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/pic1.png" alt="">
+                <h3>Customer 1</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>Ngon  !!!.</p>
+            </div>
+            <div class="box">
+                <img src="images/pic2.png" alt="">
+                <h3>Customer 2</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>So Yummii </p>
+            </div>
+            <div class="box">
+                <img src="images/pic3.png" alt="">
+                <h3>Customer 3</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>Worth to try !</p>
+            </div>
+        </div>
+    </section>
+    <!-- review section ends -->
+
+    <!-- order section starts  -->
+    <section class="order" id= "reservation" style=" display : block">
+        <h1 class="heading"> <span>reservation</span> now </h1>
+        <div class="row">
+            <div class="image">
+                <img src="images/order-img.jpg" alt="">
+            </div>
+            <form id="action">
+                <div class="inputBox">
+                    <input type="text" placeholder="name" id="orName">
+                    <input type="email" placeholder="email" id="orMail">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="number of people" id="orNum">
+                    <input type="text" placeholder="desired view" id="orFood">
+                </div>
+                <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
+                <input type="submit" value="Submit" class="btn" id="orSend">
+            </form>
+        </div>
+    </section>
+    <!-- order section ends -->
+    
+    <!-- Add to cart section start -->
+    <section class="cart" id = "order_section" style=" display : block">
+        <i class="fas fa-times"></i>
+        <h2 class="section-header" style="font-size: 2.5rem;">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase"  type="button" onclick = "showPayment()">PURCHASE</button>
+          
+    </section>
+    <!-- Add to cart section end -->
+
+    <!-- footer section  -->
+    <section class="footer" id = "footer">
+        <div class="share">
+            <a href="https://www.facebook.com/cuoi.trang.92/" class="btn">facebook</a>
+            <a href="https://www.facebook.com/cuoi.trang.92/" class="btn">twitter</a>
+            <a href="https://www.facebook.com/cuoi.trang.92/" class="btn">instagram</a>
+            <a href="https://www.facebook.com/cuoi.trang.92/" class="btn">pinterest</a>
+            <a href="https://www.facebook.com/cuoi.trang.92/" class="btn">linkedin</a>
+            </div>
+        <div class="contact">Phone number: 9999999999</div>
+        <h1 class="credit"> Created By <span> Group 6  </span> | All Rights Seserved! </h1>
+    </section>
+    <!-- footer section end -->
+
+
+    <!-- scroll top button  -->
+    <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+    <!-- custom js file link  -->
+    <script  type="text/javascript" src="js/script.js" async></script>
+
+
+    <!-- Payment form -->
+    <div id = "payment" style=" display : none" class="wrapper">
+        <h2>Payment Form </h2>
+        <form action="" method="post">
+            <!--Account Information Start-->
+            <h4>Account</h4>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Full Name" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Name on Card" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="email" placeholder="Email Address" required class="name">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Address" required class="name">
+                    <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="City" required class="name">
+                    <i class="fa fa-institution icon"></i>
+                </div>
+            </div>
+            <!--Account Information End-->
+
+
+            <!--DOB & Gender Start-->
+            <div class="input_group">
+                <div class="input_box">
+                    <h4>Date Of Birth</h4>
+                    <input type="text" placeholder="DD" required class="dob">
+                    <input type="text" placeholder="MM" required class="dob">
+                    <input type="text" placeholder="YYYY" required class="dob">
+                </div>
+                <div class="input_box">
+                    <h4>Gender</h4>
+                    <input type="radio" name="gender" class="radio" id="b1" checked>
+                    <label for="b1">Male</label>
+                    <input type="radio" name="gender" class="radio" id="b2">
+                    <label for="b2">Female</label>
+                </div>
+            </div>
+            <!--DOB & Gender End-->
+
+
+            <!--Payment Details Start-->
+            <div class="input_group">
+                <div class="input_box">
+                    <h4>Payment Details</h4>
+                    <input type="radio" name="pay" class="radio" id="bc1" checked>
+                    <label for="bc1"><span>
+                            <i class="fa fa-cc-visa"></i>Credit Card</span></label>
+                    <input type="radio" name="pay" class="radio" id="bc2">
+                    <label for="bc2"><span>
+                            <i class="fa fa-cc-paypal"></i>Paypal</span></label>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="Card Number 1111-2222-3333-4444" required>
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="Card CVC 632" required>
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <div class="input_box">
+                        <input type="number" placeholder="Exp Month" required class="name">
+                        <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <input type="number" placeholder="Exp Year" required class="name">
+                    <i class="fa fa-calendar-o icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="input_box">
+                <input name = "amount" readonly type="number" placeholder = "100" required class="name">
+                <i class="fa fa-dollar icon" aria-hidden="true"></i>
+            </div>
+            <!--Payment Details End-->
+
+            <div class="input_group">
+                <div class="input_box">
+                    <a href="index.html">
+                        <button  type="submit" >PAY NOW</button>
+                    </a>
+                    
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+
+
+</html>
